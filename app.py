@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import openai
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__,  template_folder=".")
 
 GEMINI_API_KEY = "AIzaSyBzz3oxpnhO2ii67d4vU0BEEeI1AidRcu0"
 
@@ -96,3 +96,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
