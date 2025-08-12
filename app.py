@@ -65,7 +65,8 @@ def get_meal_tip_groq(goal, cal_target):
                         ]
                     }
                 ]
-            }
+            }, 
+            timeout=15 
         )
         response.raise_for_status()
         data = response.json()
@@ -96,4 +97,5 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
